@@ -1,5 +1,3 @@
-from operator import index
-from tracemalloc import start
 from bs4 import BeautifulSoup
 import requests
 
