@@ -59,4 +59,4 @@ def get_top_five():
     for i in range(len(data)):
         country_list.append(get_data(data[i]))
 
-    return country_list
+    return country_list, data

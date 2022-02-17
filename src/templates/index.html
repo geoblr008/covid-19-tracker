@@ -22,8 +22,8 @@
         <div class="container"><a class="navbar-brand" href="#" style="font-family: Poppins, sans-serif;">Simple Covid tracker</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="color: #598B2C;">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" style="color: #448FA3;"><a class="nav-link" href="Search" style="color: rgb(70, 87, 101);font-family: Poppins, sans-serif;">Search by country</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="font-family: Poppins, sans-serif;">Team</a></li>
+                    <li class="nav-item" style="color: #448FA3;"><a class="nav-link" href="#Search" style="color: rgb(70, 87, 101);font-family: Poppins, sans-serif;">Search by country</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Team" style="font-family: Poppins, sans-serif;">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" style="font-family: Poppins, sans-serif;">Contact</a></li>
                 </ul>
             </div>
@@ -32,18 +32,18 @@
     <section>
         <div class="row row-cols-1 text-center justify-content-center align-items-center">
             <div class="col">
-                <h1 class="text-center" style="font-family: Poppins, sans-serif;">1564098</h1>
+                <h1 class="text-center" style="font-family: Poppins, sans-serif;">{{ global_data["total_infected"] }}</h1>
                 <p style="font-family: Poppins, sans-serif;">Total Cases</p>
             </div>
         </div>
         <div class="row text-end justify-content-center align-items-center">
             <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">14415</h1>
-                <p style="font-family: Poppins, sans-serif;">Dead</p>
+                <h1 style="font-family: Poppins, sans-serif;">{{ global_data["total_deaths"] }}</h1>
+                <p style="font-family: Poppins, sans-serif;">Deaths</p>
             </div>
             <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">854984</h1>
-                <p style="font-family: Poppins, sans-serif;">Smth</p>
+                <h1 style="font-family: Poppins, sans-serif;">{{ global_data["recovred"] }}</h1>
+                <p style="font-family: Poppins, sans-serif;">Recovered</p>
             </div>
         </div>
         <div class="table-responsive">
@@ -56,31 +56,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                {% for n in range(5) %}
                     <tr>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;">1</td>
-                        <td style="font-size: 20px;font-weight: bold;font-family: Poppins, sans-serif;">Cell 1</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">2000</td>
+                        <td style="font-size: 20px;font-family: Poppins, sans-serif;">{{ n+1 }}</td>
+                        <td style="font-size: 20px;font-weight: bold;font-family: Poppins, sans-serif;">{{ country_list[n] }}</td>
+                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">{{ top_country[n]["total_infected"] }}</td>
                     </tr>
-                    <tr>
-                        <td style="font-size: 20px;">2</td>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;font-weight: bold;">Cell 1</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">2000</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;">3</td>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;font-weight: bold;">Cell 1</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">2000</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;">4</td>
-                        <td style="font-size: 20px;font-weight: bold;font-family: Poppins, sans-serif;">Cell 1</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">2000</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 20px;">5</td>
-                        <td style="font-size: 20px;font-weight: bold;font-family: Poppins, sans-serif;">Cell 1</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">2000</td>
-                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
         </div>
@@ -106,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="Team">
         <section class="team-grid">
             <div class="container">
                 <div class="intro">
