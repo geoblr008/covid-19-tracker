@@ -1,126 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>geo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Competences-Grid---3-Columns---Hover-Effect-Float-Down.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/Pretty-Search-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Team-Grid.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/Competences-Grid---3-Columns---Hover-Effect-Float-Down.css"
+    />
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css" />
+    <link rel="stylesheet" href="assets/css/Pretty-Search-Form.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/Team-Grid.css" />
+  </head>
 
-<body style="font-family: Roboto, sans-serif;padding-top: 0;text-align: center;">
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="padding: 20;font-family: Roboto, sans-serif;background: #ADE8F4;">
-        <div class="container"><a class="navbar-brand" href="#" style="font-family: Poppins, sans-serif;">Simple Covid tracker</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1" style="color: #598B2C;">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" style="color: #448FA3;"><a class="nav-link" href="#Search" style="color: rgb(70, 87, 101);font-family: Poppins, sans-serif;">Search by country</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Team" style="font-family: Poppins, sans-serif;">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="font-family: Poppins, sans-serif;">Contact</a></li>
-                </ul>
-            </div>
+  <body
+    style="font-family: Roboto, sans-serif; padding-top: 0; text-align: center"
+  >
+    <nav
+      class="navbar navbar-light navbar-expand-md navigation-clean"
+      style="padding: 20; font-family: Roboto, sans-serif; background: #ade8f4"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="font-family: Poppins, sans-serif"
+          >Simple Covid tracker</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navcol-1"
+          style="color: #598b2c"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" style="color: #448fa3">
+              <a
+                class="nav-link"
+                href="#Search"
+                style="
+                  color: rgb(70, 87, 101);
+                  font-family: Poppins, sans-serif;
+                "
+                >Search by country</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#Team"
+                style="font-family: Poppins, sans-serif"
+                >Team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                style="font-family: Poppins, sans-serif"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <section>
-        <div class="row row-cols-1 text-center justify-content-center align-items-center">
-            <div class="col">
-                <h1 class="text-center" style="font-family: Poppins, sans-serif;">{{ global_data["total_infected"] }}</h1>
-                <p style="font-family: Poppins, sans-serif;">Total Cases</p>
-            </div>
+      <div
+        class="row row-cols-1 text-center justify-content-center align-items-center"
+      >
+        <div class="col">
+          <h1 class="text-center" style="font-family: Poppins, sans-serif">
+            {{ global_data["total_infected"] }}
+          </h1>
+          <p style="font-family: Poppins, sans-serif">Total Cases</p>
         </div>
-        <div class="row text-end justify-content-center align-items-center">
-            <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">{{ global_data["total_deaths"] }}</h1>
-                <p style="font-family: Poppins, sans-serif;">Deaths</p>
-            </div>
-            <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">{{ global_data["recovred"] }}</h1>
-                <p style="font-family: Poppins, sans-serif;">Recovered</p>
-            </div>
+      </div>
+      <div class="row text-end justify-content-center align-items-center">
+        <div class="col-5 text-center align-self-start">
+          <h1 style="font-family: Poppins, sans-serif">
+            {{ global_data["total_deaths"] }}
+          </h1>
+          <p style="font-family: Poppins, sans-serif">Deaths</p>
         </div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Ranking</th>
-                        <th>Country</th>
-                        <th>Total Cases</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for n in range(5) %}
-                    <tr>
-                        <td style="font-size: 20px;font-family: Poppins, sans-serif;">{{ n+1 }}</td>
-                        <td style="font-size: 20px;font-weight: bold;font-family: Poppins, sans-serif;">{{ country_list[n] }}</td>
-                        <td style="color: #ae2012;font-family: Poppins, sans-serif;font-size: 20px;">{{ top_country[n]["total_infected"] }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        <div class="col-5 text-center align-self-start">
+          <h1 style="font-family: Poppins, sans-serif">
+            {{ global_data["recovred"] }}
+          </h1>
+          <p style="font-family: Poppins, sans-serif">Recovered</p>
         </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ranking</th>
+              <th>Country</th>
+              <th>Total Cases</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for n in range(5) %}
+            <tr>
+              <td style="font-size: 20px; font-family: Poppins, sans-serif">
+                {{ n+1 }}
+              </td>
+              <td
+                style="
+                  font-size: 20px;
+                  font-weight: bold;
+                  font-family: Poppins, sans-serif;
+                "
+              >
+                {{ country_list[n] }}
+              </td>
+              <td
+                style="
+                  color: #ae2012;
+                  font-family: Poppins, sans-serif;
+                  font-size: 20px;
+                "
+              >
+                {{ top_country[n]["total_infected"] }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </section>
     <section id="Search">
-        <form class="search-form">
-            <div class="input-group"><span class="input-group-text"><i class="fa fa-search"></i></span><input class="form-control" type="text" placeholder="I am looking for.."><button class="btn btn-light" type="button">Search </button></div>
-        </form>
-        <div class="row row-cols-1 text-center justify-content-center align-items-center">
-            <div class="col">
-                <h1 class="text-center" style="font-family: Poppins, sans-serif;">1564098</h1>
-                <p style="font-family: Poppins, sans-serif;">Total Cases</p>
-            </div>
+      <form class="search-form" action="{{ url_for('index') }}" method="post">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa fa-search"></i></span
+          ><input
+            name="country_search"
+            class="form-control"
+            type="text"
+            placeholder="I am looking for.."
+          /><input class="btn btn-light" type="submit" />
         </div>
-        <div class="row text-end justify-content-center align-items-center">
-            <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">14415</h1>
-                <p style="font-family: Poppins, sans-serif;">Dead</p>
-            </div>
-            <div class="col-5 text-center align-self-start">
-                <h1 style="font-family: Poppins, sans-serif;">854984</h1>
-                <p style="font-family: Poppins, sans-serif;">Smth</p>
-            </div>
-        </div>
+      </form>
+      {{ html|safe }}
     </section>
     <section id="Team">
-        <section class="team-grid">
-            <div class="container">
-                <div class="intro">
-                    <h2 class="text-center">Team </h2>
-                    <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet.&nbsp; </p>
+      <section class="team-grid">
+        <div class="container">
+          <div class="intro">
+            <h2 class="text-center">Team</h2>
+            <p class="text-center">
+              Nunc luctus in metus eget fringilla. Aliquam sed justo ligula.
+              Vestibulum nibh erat, pellentesque ut laoreet.&nbsp;
+            </p>
+          </div>
+          <div class="row people">
+            <div class="col-md-4 col-lg-3 item"></div>
+            <div class="col-md-4 col-lg-3 item">
+              <div
+                class="box"
+                style="
+                  background: url('assets/img/2.png') no-repeat;
+                  background-size: contain;
+                "
+              >
+                <div
+                  class="cover"
+                  style="background: rgba(72, 202, 228, 0.75); height: 216px"
+                >
+                  <h3 class="name" style="color: #000">Geo</h3>
+                  <p class="title" style="color: #000">DEVELOPER</p>
+                  <div class="social">
+                    <a href="#"
+                      ><i class="fa fa-github" style="color: #000"></i></a
+                    ><a href="#"
+                      ><i class="fa fa-envelope-o" style="color: #000"></i></a
+                    ><a href="#"
+                      ><i class="fa fa-instagram" style="color: #000"></i
+                    ></a>
+                  </div>
                 </div>
-                <div class="row people">
-                    <div class="col-md-4 col-lg-3 item"></div>
-                    <div class="col-md-4 col-lg-3 item">
-                        <div class="box" style="background: url(&quot;assets/img/2.png&quot;) no-repeat;background-size: contain;">
-                            <div class="cover" style="background: rgba(72,202,228,0.75);height: 216px;">
-                                <h3 class="name" style="color: #000;">Geo</h3>
-                                <p class="title" style="color: #000;">DEVELOPER</p>
-                                <div class="social"><a href="#"><i class="fa fa-github" style="color: #000;"></i></a><a href="#"><i class="fa fa-envelope-o" style="color: #000;"></i></a><a href="#"><i class="fa fa-instagram" style="color: #000;"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-3 item">
-                        <div class="box" style="background: url(&quot;assets/img/3.png&quot;) no-repeat;background-size: contain;">
-                            <div class="cover" style="color: #000;background: rgba(72,202,228,0.75);font-family: Poppins, sans-serif;height: 216px;">
-                                <h3 class="name">Rohith</h3>
-                                <p class="title" style="color: #000;"><strong>DEVELOPER</strong></p>
-                                <div class="social"><a href="#"><i class="fa fa-github"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-envelope-o"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-3 item"></div>
-                </div>
+              </div>
             </div>
-        </section>
+            <div class="col-md-4 col-lg-3 item">
+              <div
+                class="box"
+                style="
+                  background: url('assets/img/3.png') no-repeat;
+                  background-size: contain;
+                "
+              >
+                <div
+                  class="cover"
+                  style="
+                    color: #000;
+                    background: rgba(72, 202, 228, 0.75);
+                    font-family: Poppins, sans-serif;
+                    height: 216px;
+                  "
+                >
+                  <h3 class="name">Rohith</h3>
+                  <p class="title" style="color: #000">
+                    <strong>DEVELOPER</strong>
+                  </p>
+                  <div class="social">
+                    <a href="#"><i class="fa fa-github"></i></a
+                    ><a href="#"><i class="fa fa-twitter"></i></a
+                    ><a href="#"><i class="fa fa-envelope-o"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 item"></div>
+          </div>
+        </div>
+      </section>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>

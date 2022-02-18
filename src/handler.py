@@ -20,6 +20,7 @@ def data_cleanup(array):
 
 
 def get_data(country):
+    country = country.title()
     start = -1
     for i in range(len(search)):
         if search[i].get_text().find(country) != -1:
